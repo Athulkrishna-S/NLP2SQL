@@ -13,7 +13,7 @@ import os
 current_directory = os.path.dirname(os.path.abspath(__file__))
 model_relative_path = "sqlcoder-7b-2-GGUF/sqlcoder-7b-2.Q8_0.gguf"
 model_directory = os.path.join(current_directory, model_relative_path)
-GOOGLE_API_KEY = "AIzaSyBseEjkWopXJgJZTJ_vG9xp4pkkJAqLwVE"
+GOOGLE_API_KEY = 'API KEY HERE ....PLEASE'
 Palmllm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=GOOGLE_API_KEY)
 callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
 n_gpu_layers = 5  # The number of layers to put on the GPU. The rest will be on the CPU. If you don't know how many layers there are, you can use -1 to move all to GPU.
