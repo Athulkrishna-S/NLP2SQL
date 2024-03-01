@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    <link rel="stylesheet" href="static/login.css">
+</head>
+<body>
+    
+    <div class="main">
+        {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="alert">
+            {{ messages[0] }}
+        </div>
+    {% endif %}
+{% endwith %}
+        <img src="{{ url_for('static', filename='images/mysql.png') }}" alt="Description of the image" id="centered-img" >
+    
+    <form class="login_form" action="{{ url_for('login') }}" method="post">
+        <input type="text" name="usr" class="username" placeholder="username" autocomplete="off">
+        <input type="password" name="psw" class="password" placeholder="password" autocomplete="off">
+        <input type="submit" name="btn" class="btn-login" value="login">
+
+    </form>
+    </div>
+    </body>
+</html>
